@@ -77,10 +77,6 @@ async function chooseNextCharacter() {
                 }
             }, delay);
         }
-
-        await setTimeout(() => {
-            continueButton.disabled = true;
-        }, 5000);
     } else if (charactersLeft === 1) {
         currentCharacterIndex = 0;
         imageElement.src = charactersLeft[currentCharacterIndex].path;
