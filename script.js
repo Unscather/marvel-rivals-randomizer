@@ -10,6 +10,10 @@ let resetButton = document.getElementById('ironman-button-reset');
 let continueButton = document.getElementById('ironman-button-continue');
 let closeButton = document.getElementById('ironman-button-close');
 
+//let isRandomizerActive = false;
+
+let timeouts = [];
+
 function getCharacters() {
     fetch('./characters.json')
         .then(res => res.json())
@@ -24,7 +28,7 @@ function getCharacters() {
 }
 
 function calculateProgress() {
-    let currentCompleted = 1 + charactersCompleted.length;
+    let currentCompleted = (charactersLeft > 0 ? 1 : 0) + charactersCompleted.length;
     let total = charactersLeft.length + charactersCompleted.length;
     let percentage = Math.floor(100 * currentCompleted / total);
     return {
@@ -41,6 +45,10 @@ function updateProgressElement() {
 }
 
 function reset() {
+    for (let i = 0; i < timeouts.length; i++) {
+        clearTimeout(timeouts[i]);
+    }
+
     charactersLeft = [];
     getCharacters();
     charactersCompleted = [];
@@ -68,19 +76,20 @@ async function chooseNextCharacter() {
         let delay = 20;
         for (let i = 0; i < 30; i++) {
             delay += i * 12;
-            await setTimeout(() => {
-                currentCharacterIndex = Math.floor(Math.random() * charactersLeft.length);
-                imageElement.src = charactersLeft[currentCharacterIndex].path;
-
-                if (i === 29) {
-                    nameElement.textContent = charactersLeft[currentCharacterIndex].name;
-                }
-            }, delay);
+            timeouts.push(await setTimeout(() => {
+                    currentCharacterIndex = Math.floor(Math.random() * charactersLeft.length);
+                    imageElement.src = charactersLeft[currentCharacterIndex].path;
+    
+                    if (i === 29) {
+                        nameElement.textContent = charactersLeft[currentCharacterIndex].name;
+                    }
+            }, delay));
         }
-    } else if (charactersLeft === 1) {
+    } else if (charactersLeft.length === 1) {
         currentCharacterIndex = 0;
         imageElement.src = charactersLeft[currentCharacterIndex].path;
         nameElement.textContent = charactersLeft[currentCharacterIndex].name;
+
     }
 }
 
