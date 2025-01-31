@@ -1,0 +1,82 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#menu {
+    width: 100%;
+    height: 100%;
+}
+
+#ironman-page {
+    background-color: black;
+    height: 100%;
+}
+
+#ironman-window {
+    background: white;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    position: relative;
+    top: 300px;
+}
+
+#ironman-character {
+    height: 215px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 9px;
+}
+
+#ironman-character-image {
+    height: 125px;
+    width: 125px;
+    border-style: none;
+}
+
+#ironman-character-image:not([src]) {
+    visibility: hidden;
+}
+
+#ironman-character-name {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+#ironman-progress {
+    font-size: 20px;
+}
+
+#ironman-buttons {
+    display: flex;
+}
+
+.ironman-button {
+    width: calc(500px / 3);
+    height: 45px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#ironman-button-reset {
+    background-color: rgb(220, 55, 65);
+}
+
+#ironman-button-continue {
+    background-color: rgb(0, 134, 242);
+}
+
+#ironman-button-close {
+    background-color: rgb(240, 190, 0);
+}

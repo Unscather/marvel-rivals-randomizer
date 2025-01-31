@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Rivals Randomizer</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <script type="text/javascript" src="./characters.json"></script>
+    <div id="menu">
+        <div id="ironman-page">
+            <div id="ironman-window">
+                <div id="ironman-character">
+                    <img id="ironman-character-image">
+                    <div id="ironman-character-name"></div>
+                    <div id="ironman-progress"></div>
+                </div>
+                <div id="ironman-buttons">
+                    <div id="ironman-button-reset" onclick="window.reset()" class="ironman-button ">Reset & Go</div>
+                    <div id="ironman-button-continue" onclick="window.chooseNextCharacter()" class="ironman-button">Continue</div>
+                    <div id="ironman-button-close" class="ironman-button">Close</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+{
+    "characters": [
+        {
+            "name": "Black Panther",
+            "path": "./characters/Black Panther.png"
+        },
+        {
+            "name": "Black Widow",
+            "path": "./characters/Black Widow.png"
+        },
+        {
+            "name": "Hawkeye",
+            "path": "./characters/Hawkeye.png"
+        },
+        {
+            "name": "Hela",
+            "path": "./characters/Hela.png"
+        },
+        {
+            "name": "Iron Fist",
+            "path": "./characters/Iron Fist.png"
+        },
+        {
+            "name": "Iron Man",
+            "path": "./characters/Iron Man.png"
+        },
+        {
+            "name": "Magik",
+            "path": "./characters/Magik.png"
+        },
+        {
+            "name": "Moon Knight",
+            "path": "./characters/Moonknight.png"
+        },
+        {
+            "name": "Mr. Fantastic",
+            "path": "./characters/Mr Fantastic.png"
+        },
+        {
+            "name": "Naymor",
+            "path": "./characters/Namor.png"
+        },
+        {
+            "name": "Psylocke",
+            "path": "./characters/Psylocke.png"
+        },
+        {
+            "name": "Punisher",
+            "path": "./characters/Punisher.png"
+        },
+        {
+            "name": "Scarlet Witch",
+            "path": "./characters/Scarlet Witch.png"
+        },
+        {
+            "name": "Spider-Man",
+            "path": "./characters/Spiderman.png"
+        },
+        {
+            "name": "Squirrel Girl",
+            "path": "./characters/Squirrel girl.png"
+        },
+        {
+            "name": "Star Lord",
+            "path": "./characters/Starlord.png"
+        },
+        {
+            "name": "Winter Soldier",
+            "path": "./characters/Winter Soldier.png"
+        },
+        {
+            "name": "Wolverine",
+            "path": "./characters/Wolverine.png"
+        }
+    ]
+}
