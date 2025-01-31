@@ -10,8 +10,6 @@ let resetButton = document.getElementById('ironman-button-reset');
 let continueButton = document.getElementById('ironman-button-continue');
 let closeButton = document.getElementById('ironman-button-close');
 
-//let isRandomizerActive = false;
-
 let timeouts = [];
 
 function getCharacters() {
@@ -28,7 +26,7 @@ function getCharacters() {
 }
 
 function calculateProgress() {
-    let currentCompleted = (charactersLeft > 0 ? 1 : 0) + charactersCompleted.length;
+    let currentCompleted = (charactersLeft.length > 0 ? 1 : 0) + charactersCompleted.length;
     let total = charactersLeft.length + charactersCompleted.length;
     let percentage = Math.floor(100 * currentCompleted / total);
     return {
